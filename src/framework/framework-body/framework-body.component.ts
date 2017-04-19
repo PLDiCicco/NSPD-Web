@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'framework-body',
+  selector: 'framework-framework-body',
   templateUrl: './framework-body.component.html',
   styleUrls: ['./framework-body.component.css']
 })
