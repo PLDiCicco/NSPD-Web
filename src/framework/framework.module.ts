@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+import { FrameworkConfigService } from './services/framework-config.service';
+import { ScreenService } from "./services/screen.service";
+
 import { FrameworkBodyComponent } from './framework-body/framework-body.component';
 import { ContentComponent } from './content/content.component';
 import { TitlebarComponent } from './titlebar/titlebar.component';
 import { TopbarComponent } from './topbar/topbar.component';
-
-import { FrameworkConfigService } from './services/framework-config.service';
+import { StatusbarComponent } from "./statusbar/statusbar.component";
 
 @NgModule({
   imports: [
@@ -15,10 +18,12 @@ import { FrameworkConfigService } from './services/framework-config.service';
     FrameworkBodyComponent,
     ContentComponent,
     TitlebarComponent,
-    TopbarComponent
+    TopbarComponent,
+    StatusbarComponent
   ],
   providers: [
-    FrameworkConfigService
+    FrameworkConfigService,
+    ScreenService
   ],
   exports: [
     FrameworkBodyComponent
