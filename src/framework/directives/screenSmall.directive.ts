@@ -1,12 +1,14 @@
-import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
+import { Directive, Input, TemplateRef, ViewContainerRef, OnDestroy } from '@angular/core';
 import { ScreenService } from '../services/screen.service';
+import { Subscription } from "rxjs/Subscription";
 
 @Directive({selector: '[screenSmall]'})
-export class ScreenSmall {
+export class ScreenSmall implements OnDestroy {
   private hasView = false;
+  private screenSubscription: Subscription;
 
   constructor( private viewContainer: ViewContainerRef, private template: TemplateRef<Object>,  private screenService: ScreenService) {
-     screenService.resize$.subscribe(() => this.onResize());
+     this.screenSubscription = screenService.resize$.subscribe(() => this.onResize());
   }     
 
   @Input()
@@ -21,6 +23,10 @@ export class ScreenSmall {
         this.hasView = false;
         this.viewContainer.clear();
      }
+  }
+
+  ngOnDestroy() {
+    this.screenSubscription.unsubscribe();
   }
 
   onResize() {
