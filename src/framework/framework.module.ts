@@ -9,6 +9,8 @@ import { ContentComponent } from './content/content.component';
 import { TitlebarComponent } from './titlebar/titlebar.component';
 import { TopbarComponent } from './topbar/topbar.component';
 import { StatusbarComponent } from "./statusbar/statusbar.component";
+import { ScreenSmall } from "framework/directives/screenSmall.directive";
+import { ScreenLarge } from "framework/directives/screenLarge.directive";
 
 @NgModule({
   imports: [
@@ -19,7 +21,9 @@ import { StatusbarComponent } from "./statusbar/statusbar.component";
     ContentComponent,
     TitlebarComponent,
     TopbarComponent,
-    StatusbarComponent
+    StatusbarComponent,
+    ScreenLarge,
+    ScreenSmall   
   ],
   providers: [
     FrameworkConfigService,
