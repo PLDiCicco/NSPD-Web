@@ -13,6 +13,7 @@ import { ScreenSmall } from "framework/directives/screenSmall.directive";
 import { ScreenLarge } from "framework/directives/screenLarge.directive";
 import { MenuService } from "framework/services/menu.service";
 import { MenuComponent } from "framework/menus/menu/menu.component";
+import { MenuItemComponent } from "framework/menus/menu-item/menu-item.component";
 
 @NgModule({
   imports: [
@@ -25,6 +26,7 @@ import { MenuComponent } from "framework/menus/menu/menu.component";
     TopbarComponent,
     StatusbarComponent,
     MenuComponent,
+    MenuItemComponent,
     ScreenLarge,
     ScreenSmall   
   ],
