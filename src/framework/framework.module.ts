@@ -11,6 +11,7 @@ import { TopbarComponent } from './topbar/topbar.component';
 import { StatusbarComponent } from "./statusbar/statusbar.component";
 import { ScreenSmall } from "framework/directives/screenSmall.directive";
 import { ScreenLarge } from "framework/directives/screenLarge.directive";
+import { MenuService } from "framework/services/menu.service";
 
 @NgModule({
   imports: [
@@ -27,7 +28,8 @@ import { ScreenLarge } from "framework/directives/screenLarge.directive";
   ],
   providers: [
     FrameworkConfigService,
-    ScreenService
+    ScreenService,
+    MenuService
   ],
   exports: [
     FrameworkBodyComponent
