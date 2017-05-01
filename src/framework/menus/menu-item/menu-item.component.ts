@@ -8,7 +8,7 @@ import { MenuItem } from "../../services/menu.service";
 })
 export class MenuItemComponent implements OnInit {
 
-  @Input() item: MenuItem;
+  @Input() item = <MenuItem>null; //see angular-cli issue #2034 
 
   constructor() { }
 

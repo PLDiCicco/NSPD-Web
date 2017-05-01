@@ -4,27 +4,33 @@ import { MenuItem } from "../framework/services/menu.service";
 
 export let initialMenuItems: Array<MenuItem> = [
   {
-    text: "Chief's Message",
-    icon: 'glyphicon-dashboard',
-    route: '/chief',
+    text: "Home",
+    icon: 'glyphicon-home',
+    route: '/homepage',
     submenu: null
   },
   {
-    text: 'Command Staff',
+    text: "Chief's Message",
+    icon: 'glyphicon-star',
+    route: '/chiefmessage',
+    submenu: null
+  },
+  {
+    text: 'Staff',
     icon: 'glyphicon-flag',
-    route: '/command',
+    route: '/commandstaff',
     submenu: null
   },
   {
     text: 'Links & Forms',
     icon: 'glyphicon-wrench',
-    route: '/links',
+    route: '/linksforms',
     submenu: null
   },
   {
     text: 'Information',
-    icon: 'glyphicon-wrench',
-    route: '/about',
+    icon: 'glyphicon-bookmark',
+    route: '/information',
     submenu: null
   },
 

@@ -37,3 +37,6 @@ span {
   background-color: #dfd;
 }
 
+.router-link-active {
+  background-color: #dfd;
+}
