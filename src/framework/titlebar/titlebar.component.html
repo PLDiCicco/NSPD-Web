@@ -11,6 +11,6 @@
    <img src="assets/NorthSmithfieldLogo6.jpg" alt="North Smithfield">
    <div class="menuArea">
       <framework-topbar></framework-topbar>  
-      <framework-menu></framework-menu>
+      <framework-menu *ngIf="menuService.isVertical===false"></framework-menu>
    </div>
 </div>

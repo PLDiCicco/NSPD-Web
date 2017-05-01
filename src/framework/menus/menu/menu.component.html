@@ -1,7 +1,8 @@
 <nav>
   <ul>
     <li *ngFor="let item of menuService.items">
-       <framework-menuItem [item]="item">
+       <framework-menuItem [item]="item"
+                           [ngClass]="{'vertical-menu': menuService.isVertical}">
        </framework-menuItem>
     </li>
   </ul>
