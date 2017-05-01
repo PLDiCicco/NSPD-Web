@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuService } from "framework/services/menu.service";
+import { ScreenService } from "framework/services/screen.service";
 
 @Component({
   selector: 'framework-content',
@@ -8,7 +9,8 @@ import { MenuService } from "framework/services/menu.service";
 })
 export class ContentComponent implements OnInit {
 
-  constructor(private menuService:MenuService) { }
+  constructor(private menuService:MenuService,
+              private screenService: ScreenService) { }
 
   ngOnInit() {
   }

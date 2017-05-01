@@ -10,9 +10,12 @@ export interface MenuItem {
 @Injectable()
 export class MenuService {
   items: Array<MenuItem>;
-  isVertical = true;
+  isVertical = false;
   showMobileMenu = false;
 
-
+  toggleMobileMenu() : void {
+    this.isVertical = true;
+    this.showMobileMenu = !this.showMobileMenu;
+  }
 
 }
