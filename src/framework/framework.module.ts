@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from "@angular/router";
 
 import { FrameworkConfigService } from './services/framework-config.service';
 import { ScreenService } from "./services/screen.service";
@@ -14,7 +15,7 @@ import { ScreenLarge } from "framework/directives/screenLarge.directive";
 import { MenuService } from "framework/services/menu.service";
 import { MenuComponent } from "framework/menus/menu/menu.component";
 import { MenuItemComponent } from "framework/menus/menu-item/menu-item.component";
-import { RouterModule } from "@angular/router";
+import { PopupMenuComponent } from "framework/menus/popup-menu/popup-menu.component";
 
 @NgModule({
   imports: [
@@ -30,7 +31,8 @@ import { RouterModule } from "@angular/router";
     MenuComponent,
     MenuItemComponent,
     ScreenLarge,
-    ScreenSmall   
+    ScreenSmall,
+    PopupMenuComponent   
   ],
   providers: [
     FrameworkConfigService,
