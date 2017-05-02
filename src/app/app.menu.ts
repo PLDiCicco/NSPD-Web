@@ -22,7 +22,7 @@ export let initialMenuItems: Array<MenuItem> = [
     submenu: null
   },
   {
-    text: 'Links & Forms',
+    text: 'Forms',
     icon: 'glyphicon-wrench',
     route: '/linksforms',
     submenu: null
